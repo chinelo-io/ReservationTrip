@@ -1,3 +1,15 @@
+<?php
+	session_start();
+	if (!isset($_SESSION['user_id']) && !isset($_SESSION['value_role'])) {
+		if($_SESSION['user_id'] == 'ROLE_ADMIN'){
+			header("Location: ./admin/index.php");
+		}else{
+			header("Location: ./user/index.php");
+		}
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->

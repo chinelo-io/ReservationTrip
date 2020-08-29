@@ -3,14 +3,13 @@ $(document).ready(function () {
   var roles = jQuery.parseJSON(rolesJson);
   var text = "";
   roles.forEach((element) => {
-    console.log(element);
     text +=
-      '<div style="margin-left: 15px;" class="col-4"> <div class="widget-title f-s-20"><button id="btnSelectSession"' +
-      " value='" +
+      '<div style="margin-left: 15px;" class="col"> <div class="widget-title f-s-20"><button id="btnSelectSession"' +
+      ' value="' +
       element.id_role +
-      "' idAux='" +
+      '" idAux="' +
       element.value_role +
-      '\'" type="button" class="btn btn-indigo m-b-5 m-r-3">' +
+      ' type="button" class="btn btn-indigo m-b-5 m-r-3">' +
       element.name_role +
       " </button></div></div>";
   });
@@ -26,19 +25,18 @@ $(document).ready(function () {
     var promise = $.ajax({
       type: "POST",
       url: "../app/controller/LoginController.php",
-      data: (opt = 2 + "&id_user=" + id_user + "&value_role=" + value_role),
+      data: ("opt="+ 2 + "&id_user=" + id_user + "&value_role=" + value_role),
       dataType: "json",
       success: function (obj) {
         console.log(obj);
         if (obj == null) {
-            $.notify("Ocurrió un error al Guardar la Sesión,", "error");
+          $.notify("Ocurrió un error al Guardar la Sesión,", "error");
         } else {
           window.location.href = obj;
         }
       },
       error: function (xhr, status) {
-        console.log(xhr);
-        $.notify("Ocurrió un errors,", "error");
+        $.notify("Ocurrió un error," + xhr.responseText, "error");
       },
     }); //promise
   }); // onClick

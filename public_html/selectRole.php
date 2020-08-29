@@ -37,38 +37,15 @@
         <div id="content" class="app-content" style="align-content: center; color: white;">
             <div style="text-align: center; bac">
                 <div class="mb-2 mt-2"><img src="assets/img/user-5.jpg" width="85" class="img-circle" alt="" /></div>
-                <h4 id="nameUser" idAux=""; class="widget-title" style="font-size: 20px;"></h4>
+                <h4 id="nameUser" idAux="" ; class="widget-title" style="font-size: 20px;"></h4>
                 <br>
                 <p class="widget-desc widget-desc-inverse" style="font-size: 15px;">Deseas iniciar sesión como:</p>
                 <hr class="hr-inverse-transparent" />
                 <div id="rowRoles" class="row m-b-2">
-                    <!--
-                    <div class="col-4">
-                        <div class="widget-title f-s-16">415</div>
-                        <div class="widget-desc widget-desc-inverse">posts</div>
-                    </div>
-                    
-                    <div class="col-4">
-                        <div class="widget-title f-s-16">140k</div>
-                        <div class="widget-desc widget-desc-inverse">followers</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="widget-title f-s-16">697</div>
-                        <div class="widget-desc widget-desc-inverse">following</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="widget-title f-s-16">697</div>
-                        <div class="widget-desc widget-desc-inverse">following</div>
-                    </div>
-                    -->
                 </div>
-
             </div>
-
-
         </div>
         <!-- END #content -->
-
         <!-- BEGIN btn-scroll-top -->
         <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
         <!-- END btn-scroll-top -->
@@ -79,7 +56,7 @@
     <script src="assets/js/app.min.js"></script>
     <!-- ================== END BASE JS ================== -->
     <script src="assets/js/app/selectRole.js"></script>
-</script>
+	<script src="assets/js/notify/notify.js"></script>
 </body>
 
 </html>
